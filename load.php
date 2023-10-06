@@ -7,7 +7,7 @@ $db->exec("DROP TABLE categories; DROP TABLE posts; DROP TABLE users;");
 $db->exec("CREATE TABLE categories (id INTEGER PRIMARY KEY, title VARCHAR)");
 $db->exec("CREATE TABLE posts (id INTEGER PRIMARY KEY, id_category INTEGER, title VARCHAR, body VARCHAR, slug VARCHAR UNIQUE)");
 $db->exec("CREATE INDEX id_category ON posts (id_category)");
-$db->exec("CREATE TABLE users (user VARCHAR PRIMARY KEY, password VARCHAR)");
+$db->exec("CREATE TABLE users (id INTEGER PRIMARY KEY, user VARCHAR UNIQUE, password VARCHAR)");
 
 $db->exec("INSERT INTO categories (title) VALUES ('Categoría 1')");
 $db->exec("INSERT INTO categories (title) VALUES ('Categoría 2')");
@@ -28,5 +28,5 @@ $db->exec("INSERT INTO posts (id_category,title,body,slug) VALUES ('3','Título 
 $db->exec("INSERT INTO posts (id_category,title,body,slug) VALUES ('4','Título 12', 'Body 12', 'tit12');");
 $db->exec("INSERT INTO posts (id_category,title,body,slug) VALUES ('1','Título 13', 'Body 13', 'tit13');");
 
-$db->exec("INSERT INTO users (user,password) VALUES ('admin','b89f77ba5abe1adab20132a352c72fc3')");
+$db->exec("INSERT INTO users (id, user,password) VALUES (1, 'admin','b89f77ba5abe1adab20132a352c72fc3')");
 

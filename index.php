@@ -15,8 +15,6 @@ $slug = str_replace("shell","",$slug);
 $slug = str_replace("wget","",$slug);
 $slug = str_replace("cgi","",$slug);
 
-
-
 $slug = strip_tags($slug);
 $slug = filter_var ($slug, FILTER_SANITIZE_STRING); 
 $postLastSlash = strrpos($slug, '/', 0);
