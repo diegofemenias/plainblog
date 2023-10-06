@@ -5,6 +5,5 @@ $fin = microtime(true) * 1000;
 echo "<!-- Loaded in: " . ($fin - $inicio) . " miliseconds -->\n";
 echo "<!--  Developed with <3 in Montevideo - Uruguay -->"
 ?>
-
 </body>
 </html>
