@@ -41,7 +41,7 @@ $slug = substr($slug,$postLastSlash + 1);
                 while ($row = $res->fetchArray()) {
                     ?>
                     <li class="mb-1">
-                        <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0"
+                        <button class="btn btn-toggle d-inline-flex align-items-baseline rounded border-0"
                             data-bs-toggle="collapse" data-bs-target="#home-collapse-<?php echo $i; ?>"
                             aria-expanded="false">
 
@@ -60,7 +60,7 @@ $slug = substr($slug,$postLastSlash + 1);
                                     ?>
                                     <li><a href="<?php echo $rowPost['slug']; ?>"
                                             class="link-body-emphasis d-inline-flex text-decoration-none rounded">
-                                            <?php echo $rowPost['slug']; ?>
+                                            <?php echo $rowPost['title']; ?>
                                         </a>
                                     </li>
                                     <?php

@@ -10,13 +10,13 @@ $db->exec("CREATE INDEX id_category ON posts (id_category)");
 $db->exec("CREATE TABLE users (id INTEGER PRIMARY KEY, user VARCHAR UNIQUE, password VARCHAR)");
 
 $db->exec("INSERT INTO categories (title) VALUES ('Categoría 1')");
-$db->exec("INSERT INTO categories (title) VALUES ('Categoría 2')");
+$db->exec("INSERT INTO categories (title) VALUES ('Categoría nombre largo')");
 $db->exec("INSERT INTO categories (title) VALUES ('Categoría 3')");
 $db->exec("INSERT INTO categories (title) VALUES ('Categoría 4')");
 
 $db->exec("INSERT INTO posts (id_category,title,body,slug) VALUES ('1','Título 1', '<b>Lorem ipsum</b> dólor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. FIN', 'tit1');");
 $db->exec("INSERT INTO posts (id_category,title,body,slug) VALUES ('1','Título 2', 'Segundo Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. FIN', 'tit2');");
-$db->exec("INSERT INTO posts (id_category,title,body,slug) VALUES ('3','Título 3', 'Body 3', 'tit3');");
+$db->exec("INSERT INTO posts (id_category,title,body,slug) VALUES ('3','Título con nombre largo bien largo', 'Body 3', 'tit3');");
 $db->exec("INSERT INTO posts (id_category,title,body,slug) VALUES ('4','Título 4', 'Body 4', 'tit4');");
 $db->exec("INSERT INTO posts (id_category,title,body,slug) VALUES ('1','Título 5', 'Body 5', 'tit5');");
 $db->exec("INSERT INTO posts (id_category,title,body,slug) VALUES ('2','Título 6', 'Body 6', 'tit6');");
